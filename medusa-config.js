@@ -21,18 +21,27 @@ const plugins = [
   `medusa-payment-manual`,
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
-  // {
-  //   resolve: `medusa-payment-stripe`,
-  //   options: {
-  //     api_key: STRIPE_API_KEY,
-  //     webhook_secret: STRIPE_WEBHOOK_SECRET,
-  //   },
-  // },
+  {
+    resolve: `medusa-payment-stripe`,
+    options: {
+      api_key: STRIPE_API_KEY,
+      webhook_secret: STRIPE_WEBHOOK_SECRET,
+    },
+  },
+  {
+    "resolve": `medusa-plugin-strapi`,
+    "options": {
+      "strapi_medusa_user": "f.bascunan03@gmail.com",
+      "strapi_medusa_password": "medusaPassword1",
+      "strapi_url": "127.0.0.1",
+      "strapi_port": "1337"
+    }
+  }
 ];
 
 module.exports = {
   projectConfig: {
-    // redis_url: REDIS_URL,
+    redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
     // database_url: DATABASE_URL,
     // database_type: "postgres",
