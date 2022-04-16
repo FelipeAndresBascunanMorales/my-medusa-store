@@ -36,6 +36,16 @@ const plugins = [
       "strapi_url": "127.0.0.1",
       "strapi_port": "1337"
     }
+  },
+  {
+    resolve: `medusa-file-s3`,
+    options: {
+      s3_url: "https://medusa-chile.s3.us-east-1.amazonaws.com",
+      bucket: "medusa-chile",
+      region: "us-east-1",
+      access_key_id: "AKIA5VGYMQK72FGZPSV6",
+      secret_access_key: "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",
+    }
   }
 ];
 
